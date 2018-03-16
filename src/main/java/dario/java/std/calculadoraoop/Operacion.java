@@ -5,7 +5,7 @@ public abstract class Operacion {
     
     private Double operandoA;
     private Double operandoB;
-    
+  
     public abstract Double operar();
 
     public Double getOperandoA() {

@@ -10,12 +10,43 @@ public class Calculadora {
     
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
+    
+        String input;
+        while (true) {
+            String operandoA = scanner.nextLine();        
+            String tipoOperacion = scanner.nextLine();
+            String operandoB = scanner.nextLine();
+
+            Operacion operacion=null; 
+            switch (tipoOperacion) {
+                case "+":
+                    operacion = new Suma();
+                    break;
+                case "-":
+                    operacion = new Resta();
+                    break;
+                case "/":
+                    operacion = new Division();
+                    break;               
+                case "*":
+                    operacion = new Multiplicacion();
+                    break;
+                case "p":
+                    operacion = new Potencia();
+                    break;
+                case "r":
+                    operacion = new Raiz();
+            }
+            
+            operacion.setOperandoA(Double.valueOf(operandoA));
+            operacion.setOperandoB(Double.valueOf(operandoB));
         
-        Operacion operacion = new Raiz();
-        operacion.setOperandoA(27.0);
-        operacion.setOperandoB(3.0);
+            System.out.println(operacion.operar());
+
+            
+        }
         
-        System.out.println(operacion.operar());
+        
     }
     
 }

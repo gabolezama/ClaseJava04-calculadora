@@ -48,7 +48,7 @@ public class Calculadora {
                     }
                 }
 
-            } while (tipoOperacion != "=");
+            } while (!tipoOperacion.equals("="));
 
         }
 

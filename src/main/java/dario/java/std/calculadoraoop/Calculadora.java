@@ -22,39 +22,40 @@ public class Calculadora {
             calculoIntermedio = 0.0;
 
             do {
-
-                if (!calculoExtendido) {
-                    String operandoA = scanner.nextLine();
-                    tipoOperacion = scanner.nextLine();
-                    String operandoB = scanner.nextLine();
-
-                    Operacion operacion = obtenerOperacion(tipoOperacion);
-                    operacion.setOperandoA(Double.valueOf(operandoA));
-                    operacion.setOperandoB(Double.valueOf(operandoB));
-
-                    calculoIntermedio = operacion.operar();
-                    calculoExtendido = true;
-                } else {
-                    tipoOperacion = scanner.nextLine();
-
-                    if (tipoOperacion.equals("=")) {
-                        System.out.println(calculoIntermedio);
-                    } else {
+                try {
+                    if (!calculoExtendido) {
+                        String operandoA = scanner.nextLine();
+                        tipoOperacion = scanner.nextLine();
                         String operandoB = scanner.nextLine();
+
                         Operacion operacion = obtenerOperacion(tipoOperacion);
-                        operacion.setOperandoA(calculoIntermedio);
+                        operacion.setOperandoA(Double.valueOf(operandoA));
                         operacion.setOperandoB(Double.valueOf(operandoB));
+
                         calculoIntermedio = operacion.operar();
+                        calculoExtendido = true;
+                    } else {
+                        tipoOperacion = scanner.nextLine();
+
+                        if (tipoOperacion.equals("=")) {
+                            System.out.println(calculoIntermedio);
+                        } else {
+                            String operandoB = scanner.nextLine();
+                            Operacion operacion = obtenerOperacion(tipoOperacion);
+                            operacion.setOperandoA(calculoIntermedio);
+                            operacion.setOperandoB(Double.valueOf(operandoB));
+                            calculoIntermedio = operacion.operar();
+                        }
                     }
+                } catch (TipoOperacionIncorrectaException exception) {
+                    System.out.println("Operacion incorreta: " + exception.getTipoOperacion());
+                    throw new ErrorDeSistemaException(exception);
                 }
-
             } while (!tipoOperacion.equals("="));
-
         }
-
     }
 
-    private static Operacion obtenerOperacion(String tipoOperacion) {
+    private static Operacion obtenerOperacion(String tipoOperacion) throws TipoOperacionIncorrectaException {
         Operacion operacion = null;
         switch (tipoOperacion) {
             case "+":
@@ -74,6 +75,8 @@ public class Calculadora {
                 break;
             case "r":
                 operacion = new Raiz();
+            default :
+                throw new TipoOperacionIncorrectaException(tipoOperacion);
         }
         return operacion;
     }

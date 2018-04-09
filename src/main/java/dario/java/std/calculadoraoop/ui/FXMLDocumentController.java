@@ -11,7 +11,7 @@ import javafx.scene.control.TextField;
 
 public class FXMLDocumentController implements Initializable {
 
-    Float data = 0f;
+    Float data = null;
     int operation = -1;
 
     @FXML
@@ -93,41 +93,56 @@ public class FXMLDocumentController implements Initializable {
         } else if (event.getSource() == clear) {
             display.setText("");
         } else if (event.getSource() == plus) {
-            data = Float.parseFloat(display.getText());
-            operation = 1; //Addition
-            display.setText("");
+            resolverOperacionParcial(1);
         } else if (event.getSource() == minus) {
-            data = Float.parseFloat(display.getText());
-            operation = 2; //Substraction
-            display.setText("");
+            resolverOperacionParcial(2);
         } else if (event.getSource() == mult) {
-            data = Float.parseFloat(display.getText());
-            operation = 3; //Mul
-            display.setText("");
+            resolverOperacionParcial(3);
         } else if (event.getSource() == div) {
-            data = Float.parseFloat(display.getText());
-            operation = 4; //Division
+            resolverOperacionParcial(4);
+        } else if (event.getSource() == equals) {            
+            resolverOperacion();
+        }
+    }
+    
+    private void resolverOperacionParcial(int operacion) {
+        if (data==null) {
+            data = Float.parseFloat(display.getText()); 
             display.setText("");
-        } else if (event.getSource() == equals) {
-            Float secondOperand = Float.parseFloat(display.getText());
+        } else 
+            resolverOperacion();
+        
+        operation = operacion;
+    }
+    
+    private void resolverOperacion() {
+        Float secondOperand = Float.parseFloat(display.getText());
+            Float ans = null;
+            
             switch (operation) {
                 case 1: //Addition
-                    Float ans = data + secondOperand;
-                    display.setText(String.valueOf(ans));break;
+                    ans = secondOperand + data;
+                    break;
                 case 2: //Subtraction
-                    ans = data - secondOperand;
-                    display.setText(String.valueOf(ans));break;
+                    ans = secondOperand - data;
+                    break;
                 case 3: //Mul
-                    ans = data * secondOperand;
-                    display.setText(String.valueOf(ans));break;
+                    ans = secondOperand * data;
+                    break;
                 case 4: //Div
                     ans = 0f;
                     try {
-                        ans = data / secondOperand;
-                    }catch(Exception e){display.setText("Error");}
-                    display.setText(String.valueOf(ans));break;
+                        ans = secondOperand / data;
+                    }catch(Exception e){
+                    }
             }
-        }
+            if (ans != null) { 
+                data = ans;
+                display.setText(String.valueOf(ans));
+            } else {
+                display.setText("Error");
+                data = null;
+            }
     }
 
     @Override

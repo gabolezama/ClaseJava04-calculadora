@@ -3,7 +3,7 @@ package dario.java.std;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListSorter {
+public class ListSorted {
 	public static void main(String[] args) {
 		System.out.println("Sorting with natural order");
 		List<String> l1 = createList();

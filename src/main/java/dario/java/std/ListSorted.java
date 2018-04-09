@@ -1,4 +1,4 @@
-package dario.java.std
+package dario.java.std;
 
 import java.util.ArrayList;
 import java.util.List;

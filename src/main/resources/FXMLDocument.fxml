@@ -24,12 +24,12 @@
             <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
         </rowConstraints>
          <children>
-            <Button fx:id="five" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <Button fx:id="five" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="two" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="2" GridPane.columnIndex="1">
+            <Button fx:id="two" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="2" GridPane.columnIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
@@ -39,72 +39,72 @@
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="four" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="4" GridPane.rowIndex="1">
+            <Button fx:id="four" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="4" GridPane.rowIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="minus" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <Button fx:id="minus" mnemonicParsing="false" onAction="#handleOperador" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="-" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="plus" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="+" GridPane.columnIndex="3">
+            <Button fx:id="plus" mnemonicParsing="false" onAction="#handleOperador" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="+" GridPane.columnIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="three" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="3" GridPane.columnIndex="2">
+            <Button fx:id="three" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="3" GridPane.columnIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="six" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <Button fx:id="six" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="seven" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="7" GridPane.rowIndex="2">
+            <Button fx:id="seven" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="7" GridPane.rowIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="eight" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <Button fx:id="eight" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="nine" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+            <Button fx:id="nine" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="mult" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
+            <Button fx:id="mult" mnemonicParsing="false" onAction="#handleOperador" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="*" GridPane.columnIndex="3" GridPane.rowIndex="2">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="zero" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="0" GridPane.rowIndex="3">
+            <Button fx:id="zero" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="0" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="equals" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <Button fx:id="equals" mnemonicParsing="false" onAction="#handleIgual" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="=" GridPane.columnIndex="1" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="clear" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="CL" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button fx:id="clear" mnemonicParsing="false" onAction="#handleBorrar" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="CL" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="div" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
+            <Button fx:id="div" mnemonicParsing="false" onAction="#handleOperador" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="/" GridPane.columnIndex="3" GridPane.rowIndex="3">
                <font>
                   <Font size="30.0" />
                </font>
             </Button>
-            <Button fx:id="one" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="1">
+            <Button fx:id="one" mnemonicParsing="false" onAction="#handleNumeros" prefHeight="77.0" prefWidth="116.0" stylesheets="@../myCSS.css" text="1">
                <font>
                   <Font size="30.0" />
                </font>

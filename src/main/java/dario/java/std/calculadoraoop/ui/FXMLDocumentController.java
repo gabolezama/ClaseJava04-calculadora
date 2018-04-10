@@ -67,78 +67,92 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private Button five;
-
+    
     @FXML
-    void handleButtonAction(ActionEvent event) {
-        if (event.getSource() == one) {
-            display.setText(display.getText() + "1");
-        } else if (event.getSource() == two) {
-            display.setText(display.getText() + "2");
-        } else if (event.getSource() == three) {
-            display.setText(display.getText() + "3");
-        } else if (event.getSource() == four) {
-            display.setText(display.getText() + "4");
-        } else if (event.getSource() == five) {
-            display.setText(display.getText() + "5");
-        } else if (event.getSource() == six) {
-            display.setText(display.getText() + "6");
-        } else if (event.getSource() == seven) {
-            display.setText(display.getText() + "7");
-        } else if (event.getSource() == eight) {
-            display.setText(display.getText() + "8");
-        } else if (event.getSource() == nine) {
-            display.setText(display.getText() + "9");
-        } else if (event.getSource() == zero) {
-            display.setText(display.getText() + "0");
-        } else if (event.getSource() == clear) {
-            display.setText("");
-        } else if (event.getSource() == plus) {
-            resolverOperacionParcial(1);
+    void handleOperador(ActionEvent event) {
+        
+        if (event.getSource() == plus) {
+            operation=1;
         } else if (event.getSource() == minus) {
-            resolverOperacionParcial(2);
+            operation=2;
         } else if (event.getSource() == mult) {
-            resolverOperacionParcial(3);
+            operation=3;
         } else if (event.getSource() == div) {
-            resolverOperacionParcial(4);
-        } else if (event.getSource() == equals) {            
-            resolverOperacion();
+            operation=4;
+        }
+        
+        
+    }
+    
+    @FXML
+    void handleIgual(ActionEvent event) {
+        display.setText(String.valueOf(data));
+    }
+    
+    @FXML
+    void handleBorrar(ActionEvent event) {
+        display.setText("");
+        data = null;
+    }
+    
+    private void handleNumero(Float numero) {
+        if (data==null) {
+            data = numero;
+            display.setText(display.getText() + numero);
+        } else {
+            resolverOperacion(numero);
+            display.setText(data.toString());
         }
     }
     
-    private void resolverOperacionParcial(int operacion) {
-        if (data==null) {
-            data = Float.parseFloat(display.getText()); 
-            display.setText("");
-        } else 
-            resolverOperacion();
-        
-        operation = operacion;
+    @FXML
+    void handleNumeros(ActionEvent event) {
+        if (event.getSource() == one) {
+            handleNumero(1f);
+        } else if (event.getSource() == two) {
+            handleNumero(2f);
+        } else if (event.getSource() == three) {
+            handleNumero(3f);
+        } else if (event.getSource() == four) {
+            handleNumero(4f);
+        } else if (event.getSource() == five) {
+            handleNumero(5f);
+        } else if (event.getSource() == six) {
+            handleNumero(6f);
+        } else if (event.getSource() == seven) {
+            handleNumero(7f);
+        } else if (event.getSource() == eight) {
+            handleNumero(8f);
+        } else if (event.getSource() == nine) {
+            handleNumero(9f);
+        } else if (event.getSource() == zero) {
+            handleNumero(0f);
+        }    
     }
     
-    private void resolverOperacion() {
-        Float secondOperand = Float.parseFloat(display.getText());
+    
+    private void resolverOperacion(Float secondOperand) {
             Float ans = null;
             
             switch (operation) {
                 case 1: //Addition
-                    ans = secondOperand + data;
+                    ans = data + secondOperand;
                     break;
                 case 2: //Subtraction
-                    ans = secondOperand - data;
+                    ans = data-secondOperand;
                     break;
                 case 3: //Mul
-                    ans = secondOperand * data;
+                    ans = data * secondOperand;
                     break;
                 case 4: //Div
                     ans = 0f;
                     try {
-                        ans = secondOperand / data;
+                        ans = data / secondOperand;
                     }catch(Exception e){
                     }
             }
             if (ans != null) { 
                 data = ans;
-                display.setText(String.valueOf(ans));
             } else {
                 display.setText("Error");
                 data = null;

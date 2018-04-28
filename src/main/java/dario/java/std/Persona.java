@@ -6,12 +6,20 @@ class Persona implements Comparable<Persona> {
     private final String nombre;
     private final String apellido;
     private final String dni;
+    private int edad;
+
+    public Persona(String nombre, String apellido, String dni, int edad) {
+        this(nombre, apellido, dni);
+        this.edad = edad;
+    }
 
     public Persona(String nombre, String apellido, String dni) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.dni = dni;
     }
+    
+    
 
     @Override
     public String toString() {
@@ -69,6 +77,14 @@ class Persona implements Comparable<Persona> {
 
     public String getDni() {
         return dni;
+    }
+
+
+    public static void main(String[] args) {
+        Persona p = new Persona("Juan", "Perez","444");
+        Persona p2 = new Persona("Juan", "Perez","444", 34);
+        //Persona p3 = new Persona();
+
     }
     
     

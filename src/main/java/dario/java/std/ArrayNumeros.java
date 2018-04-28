@@ -28,7 +28,8 @@ public class ArrayNumeros {
                 numNeg[indiceNeg++] = num[i];
             }
         }
-        
+
+       
         System.out.println("Numeros positivos ("+indicePos+"):");
         for (int i=0; i < indicePos; i++) {
             System.out.print(numPos[i]+ " ");

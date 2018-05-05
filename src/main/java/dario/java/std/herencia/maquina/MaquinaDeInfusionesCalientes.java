@@ -11,7 +11,8 @@ public abstract class MaquinaDeInfusionesCalientes {
     }
 
     protected abstract Infusion agregarProducto();
-
+    protected abstract void agregarCondimentos(Infusion infusion);
+    
     private void hervirAguar(Infusion infusion) {
         System.out.println("Hiervo el agua");
     }
@@ -20,6 +21,4 @@ public abstract class MaquinaDeInfusionesCalientes {
         System.out.println("Sirvo en la tasa");
     }
 
-    protected abstract void agregarCondimentos(Infusion infusion);
-    
 }

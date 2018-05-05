@@ -10,7 +10,11 @@ public class Infusion {
     public String getNombre() {
         return nombre;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Infusion{" + "nombre=" + nombre + '}';
+    }
     
     
 }

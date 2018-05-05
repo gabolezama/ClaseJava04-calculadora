@@ -10,5 +10,17 @@ public class Auto extends VehiculoMotorizado {
     public void abrirBaul() {
         System.out.println("Abriendo baúl ...");
     }
+
+    @Override
+    public void acelerar() {
+        System.out.println("Apretando el acelerador ...");
+    }
+
+    @Override
+    public void frenar() {
+        System.out.println("Pizando el freno ...");
+    }
+    
+    
     
 }

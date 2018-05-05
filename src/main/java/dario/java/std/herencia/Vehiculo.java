@@ -1,6 +1,6 @@
 package dario.java.std.herencia;
 
-public class Vehiculo {
+public abstract class Vehiculo {
  
     protected String color;
     protected String marca;
@@ -12,14 +12,10 @@ public class Vehiculo {
         this.modelo = modelo;
     }
     
-    public void acelerar() {
-        System.out.println("Acelerando ...");
-    }
+    public abstract void acelerar();
     
-    public void frenar() {
-        System.out.println("Frenando ...");
-    }
-
+    public abstract void frenar();
+    
     public String getColor() {
         return color;
     }

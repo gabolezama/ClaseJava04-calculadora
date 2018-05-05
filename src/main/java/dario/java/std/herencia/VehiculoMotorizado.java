@@ -1,7 +1,7 @@
 package dario.java.std.herencia;
 
-public class VehiculoMotorizado extends Vehiculo {
-
+public abstract class VehiculoMotorizado extends Vehiculo {
+    
     public VehiculoMotorizado(String color, String marca, String modelo) {
         super(color, marca, modelo);
     }

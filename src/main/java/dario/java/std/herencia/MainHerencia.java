@@ -3,7 +3,30 @@ package dario.java.std.herencia;
 public class MainHerencia {
 
     public static void main(String[] args) {
+        Vehiculo v1 = new Auto("Rojo", "Ford", "Modelo");
+        acelerarVehiculo(v1);
+        v1.frenar();
         
+        Vehiculo v2 = new Avion("Rojo", "Airbus", "777");
+        v2.acelerar();
+        v2.frenar();
+        acelerarVehiculo(v2);
+        
+        Bicicleta b = new Bicicleta("Azul", "Aurora", "bla");
+        frenarBicicleta(b);
+        b.frenar();
+        
+        Bicicleta b2 = new BicicletaPlayera("Azul", "Aurora", "bla");
+        frenarBicicleta(b2);
+        b2.frenar();
+      
     }
     
+    private static void acelerarVehiculo(Vehiculo v) {
+        v.acelerar();
+    }
+    
+    private static void frenarBicicleta(Bicicleta b) {
+        b.frenar();
+    }
 }

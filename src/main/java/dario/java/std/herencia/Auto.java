@@ -3,6 +3,8 @@ package dario.java.std.herencia;
 
 public class Auto extends VehiculoMotorizado {
     
+    private Desplazable desplazable = new DesplazableAMotor();
+    
     public Auto(String color, String marca, String modelo) {
         super(color, marca, modelo);
     }
@@ -13,12 +15,12 @@ public class Auto extends VehiculoMotorizado {
 
     @Override
     public void acelerar() {
-        System.out.println("Apretando el acelerador ...");
+        desplazable.acelerar();
     }
 
     @Override
     public void frenar() {
-        System.out.println("Pizando el freno ...");
+        desplazable.frenar();
     }
     
 }

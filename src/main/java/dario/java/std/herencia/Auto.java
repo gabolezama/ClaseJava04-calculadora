@@ -21,6 +21,4 @@ public class Auto extends VehiculoMotorizado {
         System.out.println("Pizando el freno ...");
     }
     
-    
-    
 }

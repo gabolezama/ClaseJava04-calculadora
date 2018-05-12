@@ -1,6 +1,6 @@
 package dario.java.std.herencia;
 
-public abstract class Vehiculo {
+public abstract class Vehiculo implements Desplazable {
  
     protected String color;
     protected String marca;
@@ -11,11 +11,7 @@ public abstract class Vehiculo {
         this.marca = marca;
         this.modelo = modelo;
     }
-    
-    public abstract void acelerar();
-    
-    public abstract void frenar();
-    
+        
     public String getColor() {
         return color;
     }

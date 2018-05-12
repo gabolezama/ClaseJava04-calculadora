@@ -15,6 +15,13 @@ public class Bicicleta extends Vehiculo {
     public void frenar() {
         System.out.println("Apretando el freno ...");
     }
+
+    @Override
+    public String toString() {
+        return "Bicicleta{" + '}';
+    }
+    
+    
     
     
 }

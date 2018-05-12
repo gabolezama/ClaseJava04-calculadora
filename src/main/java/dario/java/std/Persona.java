@@ -53,6 +53,8 @@ class Persona implements Comparable<Persona> {
         return true;
     }
 
+
+
     /*
         Orden natural
     */

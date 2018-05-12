@@ -26,6 +26,18 @@ public class MainHerencia {
         hacerDesplazar(v1);
         hacerDesplazar(v2);
         
+        String a = "Juan";
+        String a1 = "Juan";
+        
+        String c = new String("Juan");
+        String c1 = new String("Juan");
+        
+        System.out.println("a == a1: " + (a==a1));
+        System.out.println("c == c1: " + (c==c1));
+
+        System.out.println(b);
+        
+        System.out.println("Fin");
     }
     
     private static void hacerDesplazar(Desplazable d) {

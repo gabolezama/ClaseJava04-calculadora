@@ -19,7 +19,16 @@ public class QueueExample {
         personas.add(new Persona("Nicolás", "Hruszecki", "33333334"));
         personas.add(new Persona("Norberto", "Hruszecki", "33333335"));
         personas.forEach(p -> System.out.println(p));
-       
+        
+        
+        System.out.println("peek:" + personas.peek());
+        System.out.println("poll:" + personas.poll());
+        System.out.println("peek:" + personas.peek());
+        System.out.println("pop:" + personas.poll());
+        
+        System.out.println("removeLast:" + personas.removeLast());
+        System.out.println("pollLast:" + personas.pollLast());
+        
         
         /* 
             Si le pasamos un comparator parámetros no utiliza el orden 

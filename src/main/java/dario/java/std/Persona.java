@@ -27,11 +27,11 @@ class Persona implements Comparable<Persona> {
     }
 
     //https://www.javaworld.com/article/2072488/apache-commons-equalsbuilder-and-hashcodebuilder.html
-    
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 19 * hash + Objects.hashCode(this.dni);
+        int hash = 5;
+        hash = 47 * hash + Objects.hashCode(this.dni);
         return hash;
     }
 
@@ -52,6 +52,8 @@ class Persona implements Comparable<Persona> {
         }
         return true;
     }
+    
+
 
 
 
@@ -60,13 +62,7 @@ class Persona implements Comparable<Persona> {
     */
     @Override
     public int compareTo(Persona o) {
-        int retorno = this.apellido.compareTo(o.apellido);
-        
-        if (retorno == 0) {
-            return this.nombre.compareTo(o.nombre);
-        }  
-        
-        return retorno;
+        return this.dni.compareTo(o.dni);
     }
 
     public String getNombre() {
